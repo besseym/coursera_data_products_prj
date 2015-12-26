@@ -1,7 +1,7 @@
 
 #Project Shiny UI
 shinyUI(pageWithSidebar(
-  headerPanel("Child Hight Prediction - A Coursera Data Products Project", windowTitle = "Child Hight Prediction"),
+  headerPanel("Child Height Prediction - A Coursera Data Products Project", windowTitle = "Child Hight Prediction"),
   sidebarPanel(
     h3('Input'),
     numericInput("fHeight", "Father's Height (inches)", 70, min = 1, max = 100),
