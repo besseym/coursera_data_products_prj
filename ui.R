@@ -13,7 +13,18 @@ shinyUI(pageWithSidebar(
     submitButton("Calculate")
   ),
   mainPanel(
-    titlePanel("Results"),
+    h2("Instructions"),
+    wellPanel(
+    helpText("This site enables a user to predict the height of a child",
+             "after providing the height of both parents and the gender of the child.",
+             "The prediction algorithm builds a linear model using the Galton Families dataset"),
+    helpText("http://www.inside-r.org/packages/cran/HistData/docs/GaltonFamilies"),
+    helpText("In order to run the prediction algorithm",
+             "provide the father's height, mother's height and child's gender in the \"Input\" side panel.",
+             "Then, after you press the \"Calculate\" button,",
+             "your input values and the result of the prediction will be displayed in the \"Results\" section below.")
+    ),
+    h2("Results"),
     h3("Input Recieved"),
     h4("Father's Height (inches)"),
     verbatimTextOutput("fHeight"),
