@@ -1,4 +1,5 @@
 
+library(HistData)
 data(GaltonFamilies)
 lm <- lm(childHeight ~ father + mother + gender, data = GaltonFamilies)
 
